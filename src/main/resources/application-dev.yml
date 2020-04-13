@@ -8,20 +8,20 @@ server:
 huanxin:
   base:
     info:
-      app-key: 1110200407019890#mdchart
-      org-name: 1110200407019890
+      app-key: 1110200407019890#m***
+      org-name: 1110200*******
       app-name: mdchart
-      client-id: YXA6SJ6e-zO3Q5-rAVgQZZijew
-      client-secret: YXA67FbU9fSAFIoONU8oa0g6MIuyi4g
+      client-id: YXA6SJ6e-zO3Q5-rAVgQZZ*******
+      client-secret: YXA67FbU9fSAFIo*******
       server-domain: http://a1.easemob.com
 
 qiniu:
   base:
     info:
-      access_key: G4J2iQ8206CaAFdNLAkVSgrA_wLu5EN1ZbiP6CGr
-      secret_key: IdsmABe2qxwKK7UsDN4usVo0gEh7ak91XCM2FY4V
-      bucket: tianyi-demo
-      domain: http://q4721qtct.bkt.clouddn.com
+      access_key: G4J2iQ8206CaAFdNL*******ZbiP6CGr
+      secret_key: IdsmABe2qxwKK7*******CM2FY4V
+      bucket: tiany*******mo
+      domain: http://q4721qtc*******n.com
       file-prefix: userfiles
       file-base-dir: ${file.baseDir}
       user-header-prefix: /users/headers
