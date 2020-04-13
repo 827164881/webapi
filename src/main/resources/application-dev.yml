@@ -57,8 +57,8 @@ logging:
   level:
     root: debug
 
-mybatis:
-  mapper-locations: classpath*:mappers/**/*.xml
+#mybatis:
+#  mapper-locations: classpath*:mappers/**/*.xml
 
 # 分页插件配置
 
@@ -67,3 +67,6 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+
+mybatis-plus:
+  mapper-locations: classpath*:mappers/**/*.xml
