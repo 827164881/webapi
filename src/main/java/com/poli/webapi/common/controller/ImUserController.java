@@ -22,6 +22,12 @@ public class ImUserController {
     return userService.getUserList();
   }
 
+  @RequestMapping("/userList2")
+  public Object UserList2(){
+    return userService.getUserList2();
+  }
+
+
   @RequestMapping("/insertUser")
   public Object insertUser(){
     return userService.insertUser();

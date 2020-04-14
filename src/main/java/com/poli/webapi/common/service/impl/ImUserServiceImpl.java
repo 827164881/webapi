@@ -9,6 +9,7 @@ import com.poli.webapi.common.service.ImUserService;
 import com.poli.webapi.config.datasource.pager.OutWithError;
 import com.poli.webapi.config.datasource.pager.Pager;
 import com.poli.webapi.config.datasource.pager.PagerOut;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -37,6 +38,29 @@ public class ImUserServiceImpl implements ImUserService {
     PageHelper.startPage(pager.getPage(), pager.getSize());
     ImUser user = new ImUser();
     List<ImUser> cycleList = mapperVo.selectList( new QueryWrapper(user));
+    PagerOut out = new PagerOut(pager);
+    out.setResult(cycleList);
+    return out;
+  }
+
+  @Override
+  public Object getUserList2() {
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTimeInMillis(System.currentTimeMillis());
+    calendar.add(Calendar.DAY_OF_YEAR,-1);
+    Date date1 = calendar.getTime();
+    calendar.add(Calendar.DAY_OF_YEAR,2);
+    Date date2 = calendar.getTime();
+
+    Pager pager = new Pager();
+    pager.setPage(1);
+    pager.setSize(5);
+    PageHelper.startPage(pager.getPage(), pager.getSize());
+    ImUser user = new ImUser();
+    QueryWrapper queryWrapper = new QueryWrapper(user);
+    queryWrapper.between("birthday", date1,date2);
+    queryWrapper.like("nickname","MM");
+    List<ImUser> cycleList = mapperVo.selectList( queryWrapper);
     PagerOut out = new PagerOut(pager);
     out.setResult(cycleList);
     return out;
