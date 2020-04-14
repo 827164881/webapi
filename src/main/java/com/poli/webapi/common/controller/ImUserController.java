@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2020-04-09 18:51
  **/
 @RestController
-@RequestMapping("/userList")
+@RequestMapping("/user")
 public class ImUserController {
 
   @Autowired
@@ -20,5 +20,20 @@ public class ImUserController {
   @RequestMapping("/userList")
   public Object UserList(){
     return userService.getUserList();
+  }
+
+  @RequestMapping("/insertUser")
+  public Object insertUser(){
+    return userService.insertUser();
+  }
+
+  @RequestMapping("/updateUser")
+  public Object updateUser(){
+    return userService.updateUser();
+  }
+
+  @RequestMapping("/deleteUser")
+  public Object deleteUser(){
+    return userService.deleteUser();
   }
 }
